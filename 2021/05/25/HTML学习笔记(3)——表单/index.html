@@ -22,7 +22,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>HTML学习笔记(1)——语法规范 - Have a nice day :)</title>
+  <title>HTML学习笔记(2)——HTML常用标签 - Have a nice day :)</title>
   
 
   
@@ -439,7 +439,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title">
-        HTML学习笔记(1)——语法规范
+        HTML学习笔记(2)——HTML常用标签
       </h1>
       <div class='new-meta-box'>
         
@@ -470,7 +470,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2021年5月20日</p>
+    <p>发布于：2021年5月25日</p>
   </a>
 </div>
 
@@ -481,7 +481,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="HTML学习笔记(1)——语法规范" data-path="/2021/05/20/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(1)%E2%80%94%E2%80%94%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83/">
+      <div id="lc-pv" data-title="HTML学习笔记(2)——HTML常用标签" data-path="/2021/05/25/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(3)%E2%80%94%E2%80%94%E8%A1%A8%E5%8D%95/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -499,56 +499,104 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <h1 id="标签规范"><a href="#标签规范" class="headerlink" title="标签规范"></a>标签规范</h1><ol>
-<li>HTML标签是由尖括号包围的关键词 如&lt; html&gt;</li>
-<li>标签通常是成对出现的&lt; html&gt;&lt; /html&gt;此为双标签，第一个标签是开水标签，第二个标签叫做结束标签</li>
-<li>有些特殊标签是单个标签如&lt; br/&gt;</li>
-</ol>
-<h1 id="标签关系"><a href="#标签关系" class="headerlink" title="标签关系"></a>标签关系</h1><p>相对关系</p>
-<ol>
-<li>包含关系</li>
-</ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+  <h1 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h1><p>收集信息</p>
+<h1 id="表单的组成"><a href="#表单的组成" class="headerlink" title="表单的组成"></a>表单的组成</h1><ul>
+<li>表单域</li>
+<li>表单控件</li>
+<li>提示信息</li>
+</ul>
+<h1 id="表单域"><a href="#表单域" class="headerlink" title="表单域"></a>表单域</h1><p>包含表单元素的区域，会将内部的表单信息提交给服务器（划分一块区域给表单）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">from</span> <span class="attr">action</span>=<span class="string">&quot;url地址&quot;</span> <span class="attr">methof</span>=<span class="string">&quot;提交方式&quot;</span> <span class="attr">name</span>=<span class="string">&quot;表单域名称&quot;</span>&gt;</span></span><br><span class="line">  表单元素</span><br><span class="line"><span class="tag">&lt;/<span class="name">from</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<ol start="2">
-<li>并列关系</li>
-</ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="表单控件（表单元素）"><a href="#表单控件（表单元素）" class="headerlink" title="表单控件（表单元素）"></a>表单控件（表单元素）</h1><ul>
+<li>input输入元素</li>
+<li>select下拉元素</li>
+<li>textarea文本域元素</li>
+</ul>
+<h2 id="input"><a href="#input" class="headerlink" title="input"></a>input</h2><ul>
+<li>用于接收用户输入的信息</li>
+<li>&lt; input/&gt;是单标签</li>
+<li>type属性设置不同的属性值来指定不同的控件类型</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;属性值&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="基本结构标签"><a href="#基本结构标签" class="headerlink" title="基本结构标签"></a>基本结构标签</h1><table>
+<h3 id="type属性值表"><a href="#type属性值表" class="headerlink" title="type属性值表"></a>type属性值表</h3><table>
 <thead>
 <tr>
-<th align="center">标签名</th>
-<th align="center">定义</th>
-<th align="center">备注</th>
+<th align="center">属性值</th>
+<th align="center">描述</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">&lt; html&gt;&lt; /html&gt;</td>
-<td align="center">HTML标签</td>
-<td align="center">页面中对最大的标签，也称为根部标签</td>
+<td align="center">button</td>
+<td align="center">定义可点击按钮（一般通过JavaScript启动脚本）如发送验证码</td>
 </tr>
 <tr>
-<td align="center">&lt; head&gt;&lt; /head&gt;</td>
-<td align="center">头部</td>
-<td align="center">在head标签中必须设置title标签</td>
+<td align="center">checkbox</td>
+<td align="center">定义多选框（复选框）</td>
 </tr>
 <tr>
-<td align="center">&lt; title&gt;&lt; /title&gt;</td>
-<td align="center">标题</td>
-<td align="center">网页标题</td>
+<td align="center">file</td>
+<td align="center">定义输入字段和浏览按钮——文件上传</td>
 </tr>
 <tr>
-<td align="center">&lt; body&gt;&lt; /body&gt;</td>
-<td align="center">主体</td>
-<td align="center">文档中所有的元素基本都放在body标签内</td>
+<td align="center">hidden</td>
+<td align="center">定义隐藏的输入字段</td>
+</tr>
+<tr>
+<td align="center">image</td>
+<td align="center">定义图像形式的提交按钮</td>
+</tr>
+<tr>
+<td align="center">password</td>
+<td align="center">定义密码字段——输入的内容会被隐藏</td>
+</tr>
+<tr>
+<td align="center">radio</td>
+<td align="center">定义单选按钮（name值相同的多个单选按钮才能实现但与单选）</td>
+</tr>
+<tr>
+<td align="center">reset</td>
+<td align="center">定义重制按钮，清除表单内的所有数据</td>
+</tr>
+<tr>
+<td align="center">submit</td>
+<td align="center">定义提交按钮</td>
+</tr>
+<tr>
+<td align="center">text</td>
+<td align="center">定义单行的输入字段，默认20字符宽度</td>
+</tr>
+<tr>
+<td align="center">name</td>
+<td align="center">定义input元素的名称</td>
+</tr>
+<tr>
+<td align="center">value</td>
+<td align="center">input元素默认填入的值</td>
+</tr>
+<tr>
+<td align="center">checked</td>
+<td align="center">此元素默认选中</td>
+</tr>
+<tr>
+<td align="center">maxlength</td>
+<td align="center">输入字符的最大长度</td>
 </tr>
 </tbody></table>
-<p>例</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>第一个页面<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span>不要再卷了！<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="label标签"><a href="#label标签" class="headerlink" title="label标签"></a>label标签</h2><p>绑定一个表单元素，当点击&lt; label&gt;标签内的文本时，浏览器会自动将光标转到或者选择对应的表单元素上来增加用户体验 </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;对应元素id&quot;</span>&gt;</span>直接输出的文字<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;元素名字&quot;</span> <span class="attr">id</span>=<span class="string">&quot;元素id&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>运行效果</p>
-<p><img src="https://img-blog.csdnimg.cn/20210520164321944.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwMDE2MTI0,size_16,color_FFFFFF,t_70" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20210520164321944.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwMDE2MTI0,size_16,color_FFFFFF,t_70" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="在这里插入图片描述"></p>
+<h2 id="select下拉表单"><a href="#select下拉表单" class="headerlink" title="select下拉表单"></a>select下拉表单</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>选项1<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>选项2<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>在option中定义selected=“selected”时该选项为默认选项</li>
+</ul>
+<h2 id="textarea文本域"><a href="#textarea文本域" class="headerlink" title="textarea文本域"></a>textarea文本域</h2><p>供用户输入多行内容</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">rows</span>=<span class="string">&quot;显示的行数&quot;</span> <span class="attr">clos</span>=<span class="string">&quot;每行的字符数&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 
   
   
@@ -568,10 +616,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-21T00:00:00+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-29T00:00:00+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年5月21日</p>
+    <p>更新于：2021年5月29日</p>
   </a>
 </div>
 
@@ -590,7 +638,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/05/20/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(1)%E2%80%94%E2%80%94%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83/&title=HTML学习笔记(1)——语法规范 - Have a nice day :)&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/05/25/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(3)%E2%80%94%E2%80%94%E8%A1%A8%E5%8D%95/&title=HTML学习笔记(2)——HTML常用标签 - Have a nice day :)&summary="
           
           >
           
@@ -602,7 +650,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/05/20/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(1)%E2%80%94%E2%80%94%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83/&title=HTML学习笔记(1)——语法规范 - Have a nice day :)&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/05/25/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(3)%E2%80%94%E2%80%94%E8%A1%A8%E5%8D%95/&title=HTML学习笔记(2)——HTML常用标签 - Have a nice day :)&summary="
           
           >
           
@@ -614,7 +662,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/05/20/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(1)%E2%80%94%E2%80%94%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83/&title=HTML学习笔记(1)——语法规范 - Have a nice day :)&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/05/25/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(3)%E2%80%94%E2%80%94%E8%A1%A8%E5%8D%95/&title=HTML学习笔记(2)——HTML常用标签 - Have a nice day :)&summary="
           
           >
           
@@ -644,26 +692,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2021/05/25/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(3)%E2%80%94%E2%80%94%E8%A1%A8%E5%8D%95/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>HTML学习笔记(2)——HTML常用标签</p>
-          <p class='content'>应用场景收集信息
-表单的组成
-表单域
-表单控件
-提示信息
-
-表单域包含表单元素的区域，会将内部的表单信息提交给服务器（划分一块区域给表单）
-123&lt;from action=&quot;ur...</p>
-        </a>
       
-      
-        <a class='next' href='/2021/05/20/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(2)%E2%80%94%E2%80%94HTML%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/'>
-          <p class='title'>HTML学习笔记(2)——HTML常用标签<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>标题标签123456&lt;h1&gt;一级标题&lt;/h1&gt;&lt;h2&gt;二集标题&lt;/h2&gt;...&lt;h6&gt;六级标题&lt;/h6&gt;
-
-
-
-段落标签和...</p>
+        <a class='next' href='/2021/05/20/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(1)%E2%80%94%E2%80%94%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83/'>
+          <p class='title'>HTML学习笔记(1)——语法规范<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>标签规范
+HTML标签是由尖括号包围的关键词 如&lt; html&gt;
+标签通常是成对出现的&lt; html&gt;&lt; /html&gt;此为双标签，第一个标签是开水标签，第二个标签...</p>
         </a>
       
     </div>
@@ -706,7 +740,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#input"><span class="toc-text">input</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#type%E5%B1%9E%E6%80%A7%E5%80%BC%E8%A1%A8"><span class="toc-text">type属性值表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#label%E6%A0%87%E7%AD%BE"><span class="toc-text">label标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#select%E4%B8%8B%E6%8B%89%E8%A1%A8%E5%8D%95"><span class="toc-text">select下拉表单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#textarea%E6%96%87%E6%9C%AC%E5%9F%9F"><span class="toc-text">textarea文本域</span></a></li></ol>
     </div>
   </section>
 
@@ -725,7 +759,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="HTML学习笔记(1)——语法规范";
+  pdata.postTitle="HTML学习笔记(2)——HTML常用标签";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
