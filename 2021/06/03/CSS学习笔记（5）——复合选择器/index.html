@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,7 +22,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>分类：Java基础知识 - Have a nice day :)</title>
+  <title>CSS学习笔记（5）——复合选择器 - Have a nice day :)</title>
   
 
   
@@ -355,7 +353,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  dock' style="display: none;">
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg=""></div>
           
@@ -430,583 +428,244 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
-      
+    
+      <h1 class="title">
+        CSS学习笔记（5）——复合选择器
+      </h1>
+      <div class='new-meta-box'>
         
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' target="_blank" href="https://kyosg.github.io/" rel="nofollow noopener">
+    <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
+    <p>UDK_KL</p>
+  </a>
+</div>
+
           
         
           
-        
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">CSS学习笔记</a>
+    </a>
+  </div>
+
+
           
         
           
-        
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年6月3日</p>
+  </a>
+</div>
+
           
         
           
-        
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="CSS学习笔记（5）——复合选择器" data-path="/2021/06/03/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%885%EF%BC%89%E2%80%94%E2%80%94%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
           
         
+      </div>
+    
+  </div>
+
+
+  
+  
+  <p>复合选择器是建立在基础选择器之上的多个基本选择器复合而成的选择器，其优点是可以更准确、高效地选择目标元素</p>
+<ul>
+<li><p>复合选择器的分类</p>
+<ol>
+<li>后代选择器</li>
+<li>子选择器</li>
+<li>并集选择器</li>
+<li>伪类选择器</li>
+</ol>
+</li>
+</ul>
+<h1 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h1><p>选择父元素里全部同名子元素</p>
+<p>选择时可以用类名区分不同子级</p>
+<p>最终的选择目标是最后一个子级及其子级的同名标签</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">父级(任意基础选择器) 子级 子子级... &#123;样式声明&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">    <span class="selector-tag">ol</span> <span class="selector-tag">li</span> &#123; &#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span> <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="子选择器"><a href="#子选择器" class="headerlink" title="子选择器"></a>子选择器</h1><p>该选择器只能选择父级最近一层的子级</p>
+<p>使用方式同后代选择器</p>
+<h1 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h1><p>最终的选择目标是所有在选择器里出现的同名的标签</p>
+<p>习惯上并集选择器竖着写</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">父级,</span><br><span class="line">子级 &#123;样式&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">    <span class="selector-tag">div</span>,</span></span><br><span class="line"><span class="css">    <span class="selector-tag">a</span> &#123; &#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:focus&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用于选取获得焦点的<strong>表单元素</strong>，焦点就是光标（鼠标指针），一般&lt; input&gt;表单元素才能获取，因此这个选择器也主要针对表单元素来说</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">input:focus&#123;</span><br><span class="line">	background-color:yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-03T00:00:00+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年6月3日</p>
+  </a>
+</div>
+
+        
+      
+        
           
+
+        
+      
         
           
-        
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-        
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/06/03/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%885%EF%BC%89%E2%80%94%E2%80%94%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8/&title=CSS学习笔记（5）——复合选择器 - Have a nice day :)&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
       
     
-    
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/13/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%8D%81%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94%E5%BC%82%E5%B8%B8/">
-        Java——基础知识（十三）——异常
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        异常
-Java将程序运行过程中的非正常情况封装成异常类，并通过异常处理机制对程序运行时发生的各种问题进行处理两种常见异常类
-Error(错误类)： 此类表示java运行时产生的系统内部错误或资源耗尽的错误，一般此类错误仅靠修改程序本身是不能被修复的，如系统崩溃
-Exception(异常类)： 此类表示程序本身可以处理的错误，该类下除了RuntimeExpecption子类表示运行时错误外，其...
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/06/03/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%885%EF%BC%89%E2%80%94%E2%80%94%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8/&title=CSS学习笔记（5）——复合选择器 - Have a nice day :)&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
       
     
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-13</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">Java基础知识</a>
-        
-      </div>
       
-        <div>
-          <a class='readmore' href='/2021/05/13/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%8D%81%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94%E5%BC%82%E5%B8%B8/'>
-            阅读全文
-          </a>
-        </div>
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/06/03/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%885%EF%BC%89%E2%80%94%E2%80%94%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8/&title=CSS学习笔记（5）——复合选择器 - Have a nice day :)&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
       
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/12/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%8D%81%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94%E5%86%85%E9%83%A8%E7%B1%BB/">
-        Java——基础知识（十一）——内部类
-      </a>
-    </h2>
-  
-  <div class='md'>
     
       
-        内部类内部类是在类的内部定义的类，即套娃类中类，内部类所在的类称为外部类
-内部类的四种形式
-成员内部类
-局部内部类（方法内部类）
-静态内部类（static）
-匿名内部类
-
-成员内部类
-普通的内部类，直接在类的内部创建类，其“级别”与该类内其他成员同级
-其内部成员能够访问成员的范围是该内部类的外部类的所有成员
-其内部成员能够被访问的范围是该内部类的外部类的所有成员成员内部类的形式
-以定义成员方...
+    
       
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-12</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">Java基础知识</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/12/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%8D%81%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94%E5%86%85%E9%83%A8%E7%B1%BB/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
 </div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/10/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%8D%81%EF%BC%89%E2%80%94%E2%80%94%E5%A4%9A%E6%80%81%E3%80%81%E5%AF%B9%E8%B1%A1%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">
-        Java——基础知识（十）——多态、对象类型转换
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        多态
-Java的多态是由类的继承、 方法的重写、父类的引用（类似指针）指向子类对象体现的
 
-类的继承和方法重写体现多态123456789101112131415161718192021222324252627282930313233class A&#123;    public void f()    &#123;        System.out.print(&quot;A\n&quot...
+
+        
       
-    
+    </div>
   </div>
+
+
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-10</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">Java基础知识</a>
-        
-      </div>
+  
+
+  
+    <div class="prev-next">
       
-        <div>
-          <a class='readmore' href='/2021/05/10/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%8D%81%EF%BC%89%E2%80%94%E2%80%94%E5%A4%9A%E6%80%81%E3%80%81%E5%AF%B9%E8%B1%A1%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/'>
-            阅读全文
-          </a>
-        </div>
+        <a class='prev' href='/2021/06/03/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%884%EF%BC%89%E2%80%94%E2%80%94emmet%E8%AF%AD%E6%B3%95/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>CSS学习笔记（4）——emmet语法</p>
+          <p class='content'>使用缩写来提高编写速度，部分编译器不支持
+快速生成HTML结构语法
+生成标签：直接输入标签名并按tab键
+生成多个相同标签： 加*
+
+12345div*3&lt;div&gt;&lt;/div&...</p>
+        </a>
+      
+      
+        <a class='next' href='/2021/05/31/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%883%EF%BC%89%E2%80%94%E2%80%94CSS%E7%9A%84%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F/'>
+          <p class='title'>CSS学习笔记（3）——CSS的引入方式<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>CSS的三种样式表
+行内样式表（行内式）
+内部样式表（嵌入式）
+外部样式表（链接式）
+
+行内样式表直接在某行标签内书写，可以单独控制某行的样式，一般用于对页面内容的简单修改
+内部样式表代码中专门...</p>
+        </a>
       
     </div>
   
+</article>
 
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/09/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%83%EF%BC%89%E2%80%94%E2%80%94this%E5%92%8Csatic%E5%85%B3%E9%94%AE%E5%AD%97/">
-        Java——基础知识（七）——this和satic关键字
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        this 关键字
-解决成员变量和成员变量所在类外的同名变量冲突的问题12345678class A&#123;    private int a;                        public void into(int a)               &#123;                                         this.a=a;	//第一个...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">Java基础知识</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/09/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%83%EF%BC%89%E2%80%94%E2%80%94this%E5%92%8Csatic%E5%85%B3%E9%94%AE%E5%AD%97/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/09/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B9%9D%EF%BC%89%E2%80%94%E2%80%94%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95%E3%80%81%E6%8E%A5%E5%8F%A3/">
-        Java——基础知识（九）——抽象类与抽象方法、接口
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        抽象方法
-没有方法体的方法
-抽象方法要求结尾必须加分号
-修饰符必须带有abstract
-必须在抽象类内，抽象类内不一定全是抽象方法1234abstract class A&#123;   abstract public void f();&#125;
-抽象类
+  </article>
 
 
-不能实例化对象的类
-利用抽象类可以更加方便地对类进行分类
-抽象类通常是一个类组最顶层的父类
-抽象类内可以有非抽象方法1234567...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">Java基础知识</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/09/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B9%9D%EF%BC%89%E2%80%94%E2%80%94%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95%E3%80%81%E6%8E%A5%E5%8F%A3/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/09/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%85%AB%EF%BC%89%E2%80%94%E2%80%94%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E3%80%81%E7%88%B6%E7%B1%BB%E7%9A%84%E9%87%8D%E5%86%99%E3%80%81Object%E7%B1%BB%E3%80%81final%E5%85%B3%E9%94%AE%E5%AD%97/">
-        Java——基础知识（八）——类的继承、父类的重写、Object类、final关键字
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        类的继承概念
-类的继承是指在现有类的基础上构建一个新类
-继承主要描述类与类之间的关系，利用继承可以在不改变原有类的功能的前提下，对该类进行扩展，被继承的类称为父类，继承的类称为子类，父类和子类是一个相对的概念
-子类在继承父类时便拥有了父类中所有的成员变量和方法实现12345678910111213141516171819202122232425262728293031[修饰符] class ...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">Java基础知识</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/09/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%85%AB%EF%BC%89%E2%80%94%E2%80%94%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E3%80%81%E7%88%B6%E7%B1%BB%E7%9A%84%E9%87%8D%E5%86%99%E3%80%81Object%E7%B1%BB%E3%80%81final%E5%85%B3%E9%94%AE%E5%AD%97/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/08/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%94%EF%BC%89%E2%80%94%E2%80%94%E7%B1%BB%E7%9A%84%E5%B0%81%E8%A3%85/">
-        Java——基础知识（五）——类的封装
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        封装的必要性令该类的成员变量或内部信息不能被外界访问，外界只能通过该类提供的方法（函数）对该类的内部信息进行操作，以此来保证程序的正常运行。
-封装的实现通过将内部属性（成员变量）私有化（private），使外部不能直接访问其内部变量，并提供一些公共（public）的方法使外界有限制条件地间接访问和操作该类的内部成员。
-1234567891011121314151617181920212223...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">Java基础知识</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/08/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%94%EF%BC%89%E2%80%94%E2%80%94%E7%B1%BB%E7%9A%84%E5%B0%81%E8%A3%85/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/08/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%85%AD%EF%BC%89%E2%80%94%E2%80%94%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD%E3%80%81%E9%80%92%E5%BD%92%E3%80%81%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/">
-        Java——基础知识（六）——方法的重载、递归、构造方法
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        方法的重载方便编程与使用的一种自动的机制，程序会自动根据输入数据类型和数量的不同调用相应的方法
-条件
-方法的名称相同
-方法的传入参数类型或个数不同
-与方法的返回值或类型无关
-
-实现123456789101112131415161718192021222324public class Main&#123;    public static String A(int a)    &#123;  ...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">Java基础知识</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/08/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%85%AD%EF%BC%89%E2%80%94%E2%80%94%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD%E3%80%81%E9%80%92%E5%BD%92%E3%80%81%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/06/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94%E7%B1%BB%E3%80%81%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E3%80%81%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95/">
-        Java——基础知识（三）——类、成员变量、成员方法
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        类具有相同属性的对象的集合体
-
-类可以近似理解为C语言中的结构体，只不过类更加灵活
-
-类的创建
-定义类的格式
-
-1[修饰符(访问控制符)] class 类名 [extends 父类名][implements 接口名]
-
-注意：
 
 
-修饰符、父类名和接口名为可选项
-类名首字母要大写
-extends关键字用于说明该类继承于哪一个类
-implements关键字用于说明该类实现了哪些接口
-类必须编写...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">Java基础知识</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/06/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94%E7%B1%BB%E3%80%81%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E3%80%81%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/03/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%94%E2%80%94%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-        Java——基础知识（二）——基本数据类型
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        
-
-整数| 类型名 |占用空间  | 取值范围 ||–|–|–|–|–|–|| byte | 8bit | -128127 || short | 16bit |-3276832767 || int |  32bit |$-2^{31}$ ~ $2^{31}$-1 || long | 64bit |$-2^{63}$ ~ $2^{63}$-1    |
-
-注意  使用long型变量时，如果数据...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">Java基础知识</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/03/Java%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89%E2%80%94%E2%80%94%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-        <p class="current">
-          1 / 2
-        </p>
-        
-          <a class="next" rel="next" href="/categories/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/page/2/">
-            <section class="post next white-box shadow">
-              &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
 
 
-    
-  
 </div>
 <aside class='l_side'>
   
@@ -1014,120 +673,28 @@ implements关键字用于说明该类实现了哪些接口
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Have a nice day :)</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
         
-          <li><a class="flat-box"
-            title="/categories/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            id="categoriesCSSE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>CSS学习笔记</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/HTML%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" href="/categories/HTML%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"
-            id="categoriesHTMLE5ADA6E4B9A0E8AEB0E5BD95"
-            ><div class='name'>HTML学习记录</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" href="/categories/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"
-            id="categoriesJavaE59FBAE7A180E79FA5E8AF86"
-            ><div class='name'>Java基础知识</div><div class='badge'>(12)</div></a></li>
-        
-      </ul>
     </div>
   </section>
 
 
   
 
-  
-    
-    
-
-  
-
-  
-
 
 </aside>
+
 
 
 		  
@@ -1136,8 +703,8 @@ implements关键字用于说明该类实现了哪些接口
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="CSS学习笔记（5）——复合选择器";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
