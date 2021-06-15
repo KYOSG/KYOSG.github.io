@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,7 +22,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>归档：2021/6 - Have a nice day :)</title>
+  <title>Vue学习笔记（1）——Vue基础 - Have a nice day :)</title>
   
 
   
@@ -104,7 +102,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -355,7 +353,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  dock' style="display: ;">
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="[object Object]"></div>
           
@@ -424,316 +422,236 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
     
-      
+    
+    
+      <h1 class="title">
+        Vue学习笔记（1）——Vue基础
+      </h1>
+      <div class='new-meta-box'>
         
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' target="_blank" href="https://kyosg.github.io/" rel="nofollow noopener">
+    <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
+    <p>UDK_KL</p>
+  </a>
+</div>
+
           
         
           
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/06/05/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%886%EF%BC%89%E2%80%94%E2%80%94%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F/">
-        CSS学习笔记（6）——复合选择器
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        作用网页的标签很多，在不同的地方会用到不同的标签，了解他们的特点可以更好地布局我们的网。元素显示模式就是元素（标签）以什么方式进行显示如&lt; div&gt;标签自己占一行而一行可以有多个&lt; span&gt;。
-HTML元素一般分为块元素和行内元素
-块元素
-常见的块元素
-123456&lt;h1&gt; ~ &lt;h6&gt;&lt;p&gt;&lt;div&gt;&lt;ul&g...
-      
-    
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Vue学习笔记</a>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+
+
+          
         
-        <time>2021-06-05</time>
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年6月5日</p>
+  </a>
+</div>
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">CSS学习笔记</a>
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Vue学习笔记（1）——Vue基础" data-path="/2021/06/05/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%E2%80%94%E2%80%94Vue%E5%9F%BA%E7%A1%80/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <h1 id="Vue简介"><a href="#Vue简介" class="headerlink" title="Vue简介"></a>Vue简介</h1><ol>
+<li><p>是一个JavaScript框架</p>
+</li>
+<li><p>简化Dom操作，自动操作Dom元素</p>
+</li>
+<li><p>响应式数据驱动，根据数据自动变更页面</p>
+</li>
+</ol>
+<h1 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h1><ol>
+<li>导入Vue.js</li>
+<li>创建Vue实例对象，设置el和data属性</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Hello Vue<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">        &#123;&#123; message &#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">        &#125;)</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="el-挂载点"><a href="#el-挂载点" class="headerlink" title="el:挂载点"></a>el:挂载点</h1><p>通过css选择器设置vue实例管理的元素，被选择的元素的内部使用两个大括号修饰的部分会被Vue同名数据替换</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">  &#123;&#123;message&#125;&#125;						//id与message表示与下方相对应的对象会被放置在此</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">var app = new Vue&#123;&#123;</span><br><span class="line">	el:&#x27;#app&#x27;,						//id选择器</span><br><span class="line">	data:&#123;</span><br><span class="line">	message:&quot;Hello Vue&quot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>data: 数据类型</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">  &#123;&#123;message&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">var app = new Vue&#123;&#123;</span><br><span class="line">	el:&#x27;#app&#x27;,						</span><br><span class="line">	data:&#123;						//数据类型</span><br><span class="line">	message:&quot;Hello Vue&quot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Vue中的数据定义在data中，其内可以写复杂类型的数据（数组、字符串等），渲染时需要遵循js的语法</li>
+</ul>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2021/06/05/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%886%EF%BC%89%E2%80%94%E2%80%94%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F/'>
-            阅读全文
-          </a>
-        </div>
+      
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-15T00:00:00+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年6月15日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/06/05/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%883%EF%BC%89%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-        JavaScript学习笔记（3）——数据类型
-      </a>
-    </h2>
-  
-  <div class='md'>
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        变量的数据类型JS是一种若类型/动态语言，变量的数据类型在程序运行时会自动确定，且在程序运行过程中可变
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/06/05/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%E2%80%94%E2%80%94Vue%E5%9F%BA%E7%A1%80/&title=Vue学习笔记（1）——Vue基础 - Have a nice day :)&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/06/05/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%E2%80%94%E2%80%94Vue%E5%9F%BA%E7%A1%80/&title=Vue学习笔记（1）——Vue基础 - Have a nice day :)&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/06/05/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%E2%80%94%E2%80%94Vue%E5%9F%BA%E7%A1%80/&title=Vue学习笔记（1）——Vue基础 - Have a nice day :)&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2021/06/05/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%883%EF%BC%89%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>JavaScript学习笔记（3）——数据类型</p>
+          <p class='content'>变量的数据类型JS是一种若类型/动态语言，变量的数据类型在程序运行时会自动确定，且在程序运行过程中可变
 数字型
 八进制：赋值时数字前加0
 十六进制：赋值时数字前加0x
 输出时默认十进制 
-Number.MAX_VALUE为数值最大值（1.797e+308）
-Number.MIN_VALUE为数值最小值（5e-324）
-无穷大：Infinity
-无穷小：**-Infinity**
-
-字符串型字...
+Num...</p>
+        </a>
       
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-06-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">JavaScript学习记录</a>
-        
-      </div>
       
-        <div>
-          <a class='readmore' href='/2021/06/05/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%883%EF%BC%89%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/06/05/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%E2%80%94%E2%80%94Vue%E5%9F%BA%E7%A1%80/">
-        Vue学习笔记（1）——Vue基础
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        Vue简介
-是一个JavaScript框架
-
-简化Dom操作，自动操作Dom元素
-
-响应式数据驱动，根据数据自动变更页面
-
-
-起步
-导入Vue.js
-创建Vue实例对象，设置el和data属性
-
-1234567891011121314151617181920212223&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-06-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Vue学习笔记</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/06/05/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%E2%80%94%E2%80%94Vue%E5%9F%BA%E7%A1%80/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/06/03/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%884%EF%BC%89%E2%80%94%E2%80%94emmet%E8%AF%AD%E6%B3%95/">
-        CSS学习笔记（4）——emmet语法
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        使用缩写来提高编写速度，部分编译器不支持
+        <a class='next' href='/2021/06/03/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%884%EF%BC%89%E2%80%94%E2%80%94emmet%E8%AF%AD%E6%B3%95/'>
+          <p class='title'>CSS学习笔记（4）——emmet语法<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>使用缩写来提高编写速度，部分编译器不支持
 快速生成HTML结构语法
 生成标签：直接输入标签名并按tab键
 生成多个相同标签： 加*
 
-12345div*3&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
-
-
-
-
-如果是有父子关系的标签可以用&gt; 如 ul&gt;li
-
-12345ul&gt;li&l...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-06-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">CSS学习笔记</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/06/03/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%884%EF%BC%89%E2%80%94%E2%80%94emmet%E8%AF%AD%E6%B3%95/'>
-            阅读全文
-          </a>
-        </div>
+12345div*3&lt;div&gt;&lt;/div&...</p>
+        </a>
       
     </div>
   
+</article>
 
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/06/03/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%885%EF%BC%89%E2%80%94%E2%80%94%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8/">
-        CSS学习笔记（5）——复合选择器
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        复合选择器是建立在基础选择器之上的多个基本选择器复合而成的选择器，其优点是可以更准确、高效地选择目标元素
-
-复合选择器的分类
-
-后代选择器
-子选择器
-并集选择器
-伪类选择器
+  </article>
 
 
 
-后代选择器选择父元素里全部同名子元素
-选择时可以用类名区分不同子级
-最终的选择目标是最后一个子级及其子级的同名标签
-12345678910111213141516171819父级(任意基础选择器) 子级 子子级.....
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-06-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">CSS学习笔记</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/06/03/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%885%EF%BC%89%E2%80%94%E2%80%94%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
 
 
-	
+
 </div>
 <aside class='l_side'>
   
@@ -741,130 +659,28 @@ Number.MIN_VALUE为数值最小值（5e-324）
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Have a nice day :)</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
         
-          <li><a class="flat-box"
-            title="/categories/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            id="categoriesCSSE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>CSS学习笔记</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/HTML%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" href="/categories/HTML%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"
-            id="categoriesHTMLE5ADA6E4B9A0E8AEB0E5BD95"
-            ><div class='name'>HTML学习记录</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" href="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"
-            id="categoriesJavaScriptE5ADA6E4B9A0E8AEB0E5BD95"
-            ><div class='name'>JavaScript学习记录</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" href="/categories/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"
-            id="categoriesJavaE59FBAE7A180E79FA5E8AF86"
-            ><div class='name'>Java基础知识</div><div class='badge'>(12)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            id="categoriesVueE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>Vue学习笔记</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
     </div>
   </section>
 
 
   
 
-  
-    
-    
-
-  
-
-  
-
 
 </aside>
+
 
 
 		  
@@ -873,21 +689,21 @@ Number.MIN_VALUE为数值最小值（5e-324）
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="Vue学习笔记（1）——Vue基础";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="half";
-    cover_wrapper.style.display="";
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
     
   
 </script>

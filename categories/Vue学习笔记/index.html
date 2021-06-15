@@ -24,7 +24,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>归档：2021/6 - Have a nice day :)</title>
+  <title>分类：Vue学习笔记 - Have a nice day :)</title>
   
 
   
@@ -104,7 +104,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -355,7 +355,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  dock' style="display: ;">
+        <div id="full" class='cover-wrapper  dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="[object Object]"></div>
           
@@ -423,132 +423,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
+
 <div class='l_main'>
-	
-		
+  
+    
+      
   <section class="post-list">
     
       
         
           
         
-          
-        
-          
-        
-          
-        
-          
-        
       
     
     
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/06/05/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%886%EF%BC%89%E2%80%94%E2%80%94%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F/">
-        CSS学习笔记（6）——复合选择器
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        作用网页的标签很多，在不同的地方会用到不同的标签，了解他们的特点可以更好地布局我们的网。元素显示模式就是元素（标签）以什么方式进行显示如&lt; div&gt;标签自己占一行而一行可以有多个&lt; span&gt;。
-HTML元素一般分为块元素和行内元素
-块元素
-常见的块元素
-123456&lt;h1&gt; ~ &lt;h6&gt;&lt;p&gt;&lt;div&gt;&lt;ul&g...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-06-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">CSS学习笔记</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/06/05/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%886%EF%BC%89%E2%80%94%E2%80%94%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/06/05/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%883%EF%BC%89%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-        JavaScript学习笔记（3）——数据类型
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        变量的数据类型JS是一种若类型/动态语言，变量的数据类型在程序运行时会自动确定，且在程序运行过程中可变
-数字型
-八进制：赋值时数字前加0
-十六进制：赋值时数字前加0x
-输出时默认十进制 
-Number.MAX_VALUE为数值最大值（1.797e+308）
-Number.MIN_VALUE为数值最小值（5e-324）
-无穷大：Infinity
-无穷小：**-Infinity**
-
-字符串型字...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-06-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/JavaScript%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">JavaScript学习记录</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/06/05/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%883%EF%BC%89%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
       
         
           <div class='post-wrapper'>
@@ -608,124 +496,6 @@ Number.MIN_VALUE为数值最小值（5e-324）
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/06/03/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%884%EF%BC%89%E2%80%94%E2%80%94emmet%E8%AF%AD%E6%B3%95/">
-        CSS学习笔记（4）——emmet语法
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        使用缩写来提高编写速度，部分编译器不支持
-快速生成HTML结构语法
-生成标签：直接输入标签名并按tab键
-生成多个相同标签： 加*
-
-12345div*3&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
-
-
-
-
-如果是有父子关系的标签可以用&gt; 如 ul&gt;li
-
-12345ul&gt;li&l...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-06-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">CSS学习笔记</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/06/03/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%884%EF%BC%89%E2%80%94%E2%80%94emmet%E8%AF%AD%E6%B3%95/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/06/03/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%885%EF%BC%89%E2%80%94%E2%80%94%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8/">
-        CSS学习笔记（5）——复合选择器
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        复合选择器是建立在基础选择器之上的多个基本选择器复合而成的选择器，其优点是可以更准确、高效地选择目标元素
-
-复合选择器的分类
-
-后代选择器
-子选择器
-并集选择器
-伪类选择器
-
-
-
-后代选择器选择父元素里全部同名子元素
-选择时可以用类名区分不同子级
-最终的选择目标是最后一个子级及其子级的同名标签
-12345678910111213141516171819父级(任意基础选择器) 子级 子子级.....
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-06-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">CSS学习笔记</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/06/03/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%885%EF%BC%89%E2%80%94%E2%80%94%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -733,7 +503,8 @@ Number.MIN_VALUE为数值最小值（5e-324）
   
 
 
-	
+    
+  
 </div>
 <aside class='l_side'>
   
@@ -880,14 +651,14 @@ Number.MIN_VALUE为数值最小值（5e-324）
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="half";
-    cover_wrapper.style.display="";
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
     
   
 </script>
